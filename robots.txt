@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tk-jay.github.io/IT/sitemap.xml
