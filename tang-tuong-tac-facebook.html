@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAY IT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Roboto',sans-serif;
+background:#070b16;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:white;
+}
+
+/* container */
+
+.container{
+width:95%;
+max-width:420px;
+text-align:center;
+}
+
+/* logo */
+
+.logo{
+font-family:'Orbitron';
+font-size:48px;
+font-weight:900;
+background:linear-gradient(180deg,#00d4ff,#008cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 25px #00d4ff;
+margin-bottom:10px;
+}
+
+.tagline{
+opacity:.8;
+margin-bottom:25px;
+}
+
+/* card */
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,212,255,.2);
+border-radius:20px;
+padding:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(0,212,255,.2);
+}
+
+/* button */
+
+.btn{
+display:block;
+padding:16px;
+margin:12px 0;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+font-size:16px;
+color:white;
+background:linear-gradient(135deg,#00d4ff,#6a00ff);
+box-shadow:0 0 15px rgba(0,212,255,.6);
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px #00d4ff;
+}
+
+/* pricing */
+
+.price{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.06);
+padding:12px 16px;
+border-radius:10px;
+margin:8px 0;
+font-weight:600;
+}
+
+.price span{
+color:#ffd700;
+font-family:'Orbitron';
+}
+
+/* floating buttons */
+
+.float-btn{
+position:fixed;
+right:18px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+z-index:999;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:scale(1.1);
+}
+
+.zalo{
+bottom:90px;
+background:#0068ff;
+}
+
+.call{
+bottom:20px;
+background:#00c853;
+}
+
+/* mobile */
+
+@media(max-width:600px){
+
+.logo{
+font-size:38px;
+}
+
+.container{
+width:90%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">JAY IT</div>
+
+<div class="tagline">
+Dịch vụ tăng tương tác • Premium Accounts
+</div>
+
+<div class="card">
+
+<h3 style="margin-bottom:15px">Premium Accounts</h3>
+
+<div class="price">
+CapCut Pro
+<span>69K</span>
+</div>
+
+<div class="price">
+ChatGPT Plus
+<span>149K</span>
+</div>
+
+<div class="price">
+Netflix
+<span>99K</span>
+</div>
+
+<div class="price">
+YouTube Premium
+<span>49K</span>
+</div>
+
+<a href="https://zalo.me/0878446688" target="_blank" class="btn">
+NHẮN TIN ZALO
+</a>
+
+<a href="tel:0878446688" class="btn">
+GỌI NGAY 0878 446 688
+</a>
+
+</div>
+
+</div>
+
+<!-- floating buttons -->
+
+<a href="https://zalo.me/0878446688" target="_blank" class="float-btn zalo">
+💬
+</a>
+
+<a href="tel:0878446688" class="float-btn call">
+📞
+</a>
+
+</body>
+</html>
