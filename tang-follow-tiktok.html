@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAY IT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050510;
+font-family:Roboto;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.banner{
+
+width:100%;
+max-width:420px;
+
+aspect-ratio:9/16;
+
+background:linear-gradient(135deg,#0c0c1d,#1a0a2e);
+
+border-radius:25px;
+
+overflow:hidden;
+
+position:relative;
+
+padding:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+box-shadow:0 0 40px rgba(0,150,255,0.3);
+
+}
+
+/* background grid */
+
+.grid{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background-image:
+
+linear-gradient(90deg,rgba(0,150,255,0.08) 1px,transparent 1px),
+
+linear-gradient(rgba(0,150,255,0.08) 1px,transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.4;
+
+}
+
+/* brand */
+
+.brand{
+
+text-align:center;
+
+z-index:2;
+
+}
+
+.brand h1{
+
+font-family:Orbitron;
+
+font-size:48px;
+
+font-weight:900;
+
+background:linear-gradient(#00d4ff,#0099cc);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+letter-spacing:3px;
+
+}
+
+.tag{
+
+color:#fff;
+
+opacity:.9;
+
+margin-top:6px;
+
+font-size:14px;
+
+}
+
+/* icons */
+
+.icons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+.icon{
+
+width:45px;
+
+height:45px;
+
+border-radius:12px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+.fb{background:#1877f2;}
+.tiktok{background:#000;}
+.shopee{background:#ee4d2d;}
+
+/* hotline */
+
+.hotline{
+
+text-align:center;
+
+color:#fff;
+
+margin-top:10px;
+
+}
+
+.number{
+
+font-family:Orbitron;
+
+color:#ffd700;
+
+font-size:22px;
+
+}
+
+/* price */
+
+.prices{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+margin-top:15px;
+
+z-index:2;
+
+}
+
+.price{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:12px 15px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(0,212,255,0.3);
+
+color:#fff;
+
+}
+
+.price span:last-child{
+
+background:#ffd700;
+
+color:#000;
+
+font-family:Orbitron;
+
+padding:5px 14px;
+
+border-radius:20px;
+
+font-weight:900;
+
+}
+
+/* CTA */
+
+.cta{
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+.button{
+
+background:linear-gradient(135deg,#00d4ff,#ff00ff);
+
+padding:16px;
+
+border-radius:14px;
+
+color:#fff;
+
+font-weight:700;
+
+font-size:20px;
+
+margin-bottom:10px;
+
+box-shadow:0 0 20px rgba(0,212,255,0.6);
+
+}
+
+.extra{
+
+font-size:13px;
+
+color:#ddd;
+
+line-height:1.5;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="banner">
+
+<div class="grid"></div>
+
+<div class="brand">
+<h1>JAY IT</h1>
+<div class="tag">Dịch Vụ Tăng Tương Tác - Premium</div>
+
+<div class="icons">
+<div class="icon fb">f</div>
+<div class="icon tiktok">♪</div>
+<div class="icon shopee">S</div>
+</div>
+
+<div class="hotline">
+HOTLINE
+<div class="number">0878 446 688</div>
+</div>
+
+</div>
+
+<div class="prices">
+
+<div class="price">
+<span>CapCut Pro</span>
+<span>69K</span>
+</div>
+
+<div class="price">
+<span>ChatGPT Plus</span>
+<span>149K</span>
+</div>
+
+<div class="price">
+<span>Netflix</span>
+<span>99K</span>
+</div>
+
+<div class="price">
+<span>YouTube Premium</span>
+<span>49K</span>
+</div>
+
+</div>
+
+<div class="cta">
+
+<div class="button">NHẮN TIN NGAY</div>
+
+<div class="extra">
+Tạo Shop TikTok • Shopee A-Z<br>
+Thiết Kế Ảnh • Video • AI
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
