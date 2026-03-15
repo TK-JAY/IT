@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>JAY IT — Premium Accounts & Social Growth</title>
 
-<!-- SEO -->
-<meta name="description" content="Jay IT cung cấp Premium Accounts (30 ngày) và dịch vụ tăng trưởng mạng xã hội, thiết kế & vận hành shop TikTok/Shopee, ảnh & video AI." />
-<meta property="og:title" content="JAY IT — Premium Accounts & Social Growth" />
-<meta property="og:description" content="CapCut Pro, ChatGPT Plus, Netflix, YouTube Premium (30 ngày) • Thiết kế & vận hành shop • Ảnh & Video AI" />
-<meta property="og:type" content="website" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JAY IT | Premium Accounts & Social Growth</title>
+
+<meta name="description" content="Jay IT cung cấp Premium Accounts 30 ngày và dịch vụ Social Growth, thiết kế shop, vận hành shop, ảnh & video AI">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
---bg:#040712;
---card:#0b0f1f;
---muted:#9aa2c8;
---cyan:#00e1ff;
---violet:#7a2cff;
---gold:#ffd000;
---green:#00c16a;
---border:rgba(0,225,255,.35);
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
 body{
-background:var(--bg);
-color:#fff;
 font-family:'Poppins',sans-serif;
+background:#02040c;
+color:white;
 display:flex;
 justify-content:center;
 padding:40px 14px;
+transition:.4s;
 overflow-x:hidden;
 }
 
-/* animated grid background */
+/* LOADING */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#02040c;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-logo{
+font-family:'Orbitron';
+font-size:40px;
+color:#00e1ff;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:.4}
+50%{opacity:1}
+100%{opacity:.4}
+}
+
+/* GALAXY */
+
 body::before{
 content:'';
 position:fixed;
-inset:0;
+width:200%;
+height:200%;
 background:
-linear-gradient(rgba(0,225,255,.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,225,255,.05) 1px, transparent 1px);
+radial-gradient(white 1px,transparent 1px);
 background-size:40px 40px;
-animation:gridMove 18s linear infinite;
+opacity:.05;
+animation:stars 120s linear infinite;
 z-index:-2;
 }
-@keyframes gridMove{
-0%{transform:translateY(0)}
-100%{transform:translateY(40px)}
+
+@keyframes stars{
+from{transform:translateY(0)}
+to{transform:translateY(-2000px)}
 }
 
-/* glow blobs */
-.glow{
-position:fixed;
-width:420px;
-height:420px;
-filter:blur(160px);
-opacity:.18;
-z-index:-1;
-}
-.glow.cyan{background:var(--cyan);top:-120px;left:-120px}
-.glow.violet{background:var(--violet);bottom:-140px;right:-120px}
+/* CONTAINER */
 
 .container{
 width:100%;
@@ -71,120 +88,80 @@ max-width:460px;
 text-align:center;
 }
 
-/* logo */
+/* LOGO */
+
 .logo{
 font-family:'Orbitron',sans-serif;
-font-size:48px;
+font-size:52px;
 letter-spacing:4px;
-color:var(--cyan);
+color:#00e1ff;
 text-shadow:
-0 0 10px var(--cyan),
-0 0 28px var(--cyan),
-0 0 80px var(--cyan);
+0 0 10px #00e1ff,
+0 0 40px #00e1ff,
+0 0 100px #00e1ff;
 margin-bottom:6px;
-animation:logoPulse 3s ease-in-out infinite;
-}
-@keyframes logoPulse{
-0%,100%{text-shadow:0 0 8px var(--cyan),0 0 24px var(--cyan)}
-50%{text-shadow:0 0 16px var(--cyan),0 0 40px var(--cyan)}
 }
 
 .tagline{
+color:#9da5c6;
 font-size:14px;
-color:var(--muted);
-margin-bottom:26px;
+margin-bottom:25px;
 }
 
-/* social icons */
-.social{
-display:flex;
-justify-content:center;
-gap:12px;
-margin-bottom:26px;
-}
-.social a{
-width:46px;
-height:46px;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#121735;
-transition:.25s;
-box-shadow:0 0 10px rgba(0,225,255,.15);
-}
-.social a:hover{transform:scale(1.12)}
-.social svg{width:22px;height:22px;fill:#fff}
+/* CARD */
 
-/* card */
 .card{
-background:var(--card);
+background:rgba(12,16,35,.75);
+backdrop-filter:blur(12px);
 border-radius:20px;
-padding:22px;
-border:1px solid var(--border);
-box-shadow:
-0 0 28px rgba(0,225,255,.25),
-inset 0 0 25px rgba(0,225,255,.06);
-backdrop-filter:blur(10px);
+padding:24px;
+border:1px solid rgba(0,225,255,.3);
+box-shadow:0 0 40px rgba(0,225,255,.25);
 }
 
-/* sections */
-.section{margin-bottom:18px}
-.section h3{
-font-size:17px;
-margin-bottom:12px;
-color:#d3d9ff;
-}
+/* ITEMS */
 
-/* list item */
 .item{
+background:#13182b;
+padding:14px 16px;
+border-radius:12px;
 display:flex;
 justify-content:space-between;
-padding:14px 16px;
-background:#13182b;
-border-radius:12px;
-margin-bottom:10px;
-font-size:14px;
-transition:.25s;
-}
-.item:hover{transform:scale(1.03);background:#1b213b}
-.price{color:var(--gold);font-weight:600}
-
-/* services */
-.service{
-padding:14px;
-background:#13182b;
-border-radius:12px;
 margin-bottom:10px;
 transition:.25s;
-font-size:14px;
 }
-.service:hover{background:#1b213b;transform:scale(1.03)}
 
-/* buttons */
+.item:hover{
+transform:scale(1.04);
+}
+
+.price{
+color:#ffd000;
+font-weight:600;
+}
+
+/* BUTTONS */
+
 .btn{
 display:block;
-width:100%;
 padding:14px;
-border-radius:14px;
-text-decoration:none;
-font-weight:600;
 margin-top:12px;
-transition:.25s;
+border-radius:14px;
+font-weight:600;
+text-decoration:none;
+color:white;
 }
-.zalo{
-background:linear-gradient(90deg,var(--cyan),var(--violet));
-box-shadow:0 0 18px rgba(0,225,255,.6);
-color:#fff;
-}
-.call{
-background:linear-gradient(90deg,#00ffa6,var(--cyan));
-box-shadow:0 0 18px rgba(0,255,170,.5);
-color:#fff;
-}
-.btn:hover{transform:scale(1.05)}
 
-/* floating buttons */
+.zalo{
+background:linear-gradient(90deg,#00e1ff,#7a2cff);
+}
+
+.call{
+background:linear-gradient(90deg,#00ffa6,#00e1ff);
+}
+
+/* FLOAT BUTTON */
+
 .float{
 position:fixed;
 right:18px;
@@ -193,74 +170,84 @@ display:flex;
 flex-direction:column;
 gap:12px;
 }
+
 .float a{
-width:58px;
-height:58px;
+width:60px;
+height:60px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
+color:white;
 font-size:22px;
-color:#fff;
 text-decoration:none;
-box-shadow:0 0 18px rgba(0,225,255,.6);
-}
-.float-zalo{background:#0068ff}
-.float-call{background:var(--green)}
-
-/* click stats */
-.stats{
-font-size:12px;
-color:#7f86a5;
-margin-top:10px;
 }
 
-/* footer */
-.footer{
-margin-top:18px;
+.float-zalo{background:#0068ff;}
+.float-call{background:#00c16a;}
+
+/* QR */
+
+.qr{
+margin-top:16px;
+}
+
+.qr img{
+width:120px;
+border-radius:10px;
+}
+
+/* CHATBOT */
+
+.chatbox{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#0f1430;
+border-radius:12px;
+padding:14px;
+font-size:13px;
+width:210px;
+box-shadow:0 0 20px rgba(0,225,255,.3);
+}
+
+/* MODE */
+
+.toggle{
+position:fixed;
+top:20px;
+right:20px;
+cursor:pointer;
+background:#111;
+padding:8px 14px;
+border-radius:10px;
 font-size:12px;
-color:#7f86a5;
+}
+
+.light{
+background:#f4f6ff;
+color:#111;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="glow cyan"></div>
-<div class="glow violet"></div>
+<div id="loader">
+<div class="loader-logo">JAY IT</div>
+</div>
+
+<div class="toggle" onclick="toggleMode()">MODE</div>
 
 <div class="container">
 
 <div class="logo">JAY IT</div>
 <div class="tagline">Premium Accounts • Social Growth</div>
 
-<!-- social -->
-<div class="social">
-
-<a href="#">
-<svg viewBox="0 0 24 24">
-<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.4c0-2.5 1.5-3.8 3.7-3.8 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6v2h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/>
-</svg>
-</a>
-
-<a href="#">
-<svg viewBox="0 0 24 24">
-<path d="M12 2c1 1.9 2.8 3.2 5 3.5v3.1c-1.7-.1-3.3-.6-4.7-1.5v6.6c0 3.4-2.8 6.2-6.3 6.2S0 17.1 0 13.7s2.8-6.2 6.3-6.2c.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2h2.7z"/>
-</svg>
-</a>
-
-<a href="#">
-<svg viewBox="0 0 24 24">
-<path d="M19 7h-2V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-</svg>
-</a>
-
-</div>
-
 <div class="card">
 
-<div class="section">
 <h3>Premium Accounts (30 ngày)</h3>
 
 <div class="item">CapCut Pro <span class="price">69K</span></div>
@@ -268,67 +255,49 @@ color:#7f86a5;
 <div class="item">Netflix <span class="price">99K</span></div>
 <div class="item">YouTube Premium <span class="price">49K</span></div>
 
-</div>
+<h3 style="margin-top:20px">Dịch vụ khác</h3>
 
-<div class="section">
-<h3>Dịch vụ khác</h3>
+<div class="item">Thiết kế Shop TikTok / Shopee</div>
+<div class="item">Vận hành Shop A-Z</div>
+<div class="item">Thiết kế ảnh sản phẩm AI</div>
+<div class="item">Tạo video AI bán hàng</div>
 
-<div class="service">Thiết kế Shop TikTok / Shopee</div>
-<div class="service">Vận hành Shop A-Z</div>
-<div class="service">Thiết kế ảnh sản phẩm AI</div>
-<div class="service">Tạo video AI bán hàng</div>
+<a href="https://zalo.me/0878446688" class="btn zalo">NHẮN ZALO</a>
+<a href="tel:0878446688" class="btn call">GỌI NGAY</a>
 
-</div>
-
-<a href="https://zalo.me/0878446688" class="btn zalo" id="zaloBtn">
-NHẮN ZALO NGAY
-</a>
-
-<a href="tel:0878446688" class="btn call" id="callBtn">
-GỌI NGAY 0878 446 688
-</a>
-
-<div class="stats">
-Zalo clicks: <span id="zaloCount">0</span> • Calls: <span id="callCount">0</span>
+<div class="qr">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://zalo.me/0878446688">
 </div>
 
 </div>
 
-<div class="footer">
-Bảo hành đầy đủ • Hỗ trợ 24/7
 </div>
 
-</div>
-
-<!-- floating -->
 <div class="float">
 <a href="https://zalo.me/0878446688" class="float-zalo">Z</a>
 <a href="tel:0878446688" class="float-call">☎</a>
 </div>
 
+<div class="chatbox">
+Xin chào 👋<br>
+Cần tư vấn dịch vụ?<br>
+Nhấn Zalo để chat ngay.
+</div>
+
 <script>
-const zaloBtn=document.getElementById('zaloBtn')
-const callBtn=document.getElementById('callBtn')
-const zaloCount=document.getElementById('zaloCount')
-const callCount=document.getElementById('callCount')
 
-let z=localStorage.getItem('zaloClicks')||0
-let c=localStorage.getItem('callClicks')||0
+/* loader */
 
-zaloCount.textContent=z
-callCount.textContent=c
-
-zaloBtn.onclick=()=>{
-z++
-localStorage.setItem('zaloClicks',z)
-zaloCount.textContent=z
+window.onload=function(){
+document.getElementById("loader").style.display="none"
 }
 
-callBtn.onclick=()=>{
-c++
-localStorage.setItem('callClicks',c)
-callCount.textContent=c
+/* mode */
+
+function toggleMode(){
+document.body.classList.toggle("light")
 }
+
 </script>
 
 </body>
